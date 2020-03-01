@@ -4,7 +4,7 @@ from snake_6 import SimpleSometimesHungrySnake
 
 
 class AttemptKillsSnake(BaseSnake):
-
+    DIFFICULTY = 7
     HUNGER_THRESHOLD = 30
 
     def move(self, gamestate):
@@ -27,5 +27,5 @@ class AttemptKillsSnake(BaseSnake):
     def taunt(self):
         return ""
 
-    def end(self):
+    def end(self, details):
         pass

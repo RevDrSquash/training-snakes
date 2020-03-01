@@ -3,6 +3,7 @@ from base_snake import BaseSnake
 
 
 class Snake3(BaseSnake):
+    DIFFICULTY = 3
 
     def move(self, gamestate):
         first_food = gamestate.food[0]
@@ -32,5 +33,5 @@ class Snake3(BaseSnake):
     def taunt(self):
         return ""
 
-    def end(self):
+    def end(self, details):
         pass

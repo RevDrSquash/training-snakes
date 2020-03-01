@@ -3,9 +3,9 @@ from base_snake import BaseSnake
 
 
 class Snake0(BaseSnake):
+    DIFFICULTY = 0
 
     def move(self, gamestate):
-
         current_vector = gamestate.me.current_direction
         if current_vector != noop:
             return current_vector
@@ -35,5 +35,5 @@ class Snake0(BaseSnake):
     def taunt(self):
         return ""
 
-    def end(self):
+    def end(self, details):
         pass

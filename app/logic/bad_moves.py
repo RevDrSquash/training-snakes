@@ -22,6 +22,7 @@ class BadMoves(object):
             return True
         if not gs.is_empty(coord) and coord not in gs.all_tails:
             return True
+        print(coord)
         return False
 
     def risky_move(self, move, gs):

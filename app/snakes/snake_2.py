@@ -3,6 +3,7 @@ from base_snake import BaseSnake
 
 
 class Snake2(BaseSnake):
+    DIFFICULTY = 2
 
     def move(self, gamestate):
 
@@ -28,5 +29,5 @@ class Snake2(BaseSnake):
     def taunt(self):
         return ""
 
-    def end(self):
+    def end(self, details):
         pass

@@ -3,6 +3,7 @@ from snake_0 import Snake0
 
 
 class Snake1(Snake0):
+    DIFFICULTY = 1
 
     def move(self, gamestate):
         default_move = Snake0().move(gamestate)
@@ -25,5 +26,5 @@ class Snake1(Snake0):
     def taunt(self):
         return ""
 
-    def end(self):
+    def end(self, details):
         pass

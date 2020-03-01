@@ -3,6 +3,7 @@ from base_snake import BaseSnake
 
 
 class SimpleHungrySnake(BaseSnake):
+    DIFFICULTY = 5
 
     def move(self, gamestate):
         closest_food = self._closest_to(gamestate.food, gamestate.me.head)
@@ -44,5 +45,5 @@ class SimpleHungrySnake(BaseSnake):
     def taunt(self):
         return ""
 
-    def end(self):
+    def end(self, details):
         pass

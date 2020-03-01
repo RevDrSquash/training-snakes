@@ -17,9 +17,9 @@ class TailChaser(BaseSnake, BadMoves, ChaiseTail, Eat, Kill, OrthogonalDistances
             (lambda gs: right, "right"),
         ]
 
-        for f, taunt in options:
+        for f, shout in options:
             desired_move = f(gamestate)
             if not self.bad_move(desired_move, gamestate):
-                return desired_move, taunt
+                return desired_move, shout
 
         return down

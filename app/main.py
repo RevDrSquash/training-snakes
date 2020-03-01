@@ -22,7 +22,7 @@ def start(snake_name):
         'name': snake.name(),
         'color': snake.color(),
         'head_url': "https://www.placecage.com/50/50",
-        'taunt': "hello"
+        'shout': "hello"
     })
 
 
@@ -33,18 +33,19 @@ def move(snake_name):
     gamestate = snake.payload_to_game_state(data)
     move = snake.move(gamestate)
     if move is None:
-        return json.dumps({"move": "up", 'taunt': "hello"})
+        return json.dumps({"move": "up", 'shout': "hello"})
 
     if type(move) is tuple:
-        move, taunt = move
+        move, shout = move
+        print(snake_name, move.direction())
         return json.dumps({
             "move": move.direction(),
-            "taunt": taunt
+            "shout": shout
         })
 
     return json.dumps({
-        'taunt': "hello",
-        "move": move.direction()
+        "move": move.direction(),
+        "shout": "hello"
     })
 
 
@@ -53,6 +54,11 @@ def end(snake_name):
     snake = get_snake(snake_name)
     data = flask.request.json
     snake.end(data)
+    return json.dumps({})
+
+
+@app.route('/<snake_name>/ping', methods=['GET', 'POST'])
+def ping(snake_name):
     return json.dumps({})
 
 

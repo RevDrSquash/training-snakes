@@ -10,7 +10,7 @@ class Snake(object):
     @property
     def coords(self):
         if self._coords is None:
-            points = self.data["body"]["data"]
+            points = self.data["body"]
             self._coords = [Vector(p["x"], p["y"]) for p in points]
         return self._coords
 
@@ -20,7 +20,10 @@ class Snake(object):
 
     @property
     def neck(self):
-        return self.coords[1]
+        if len(self.coords) < 2:
+           return self.coords[0]
+        else:
+           return self.coords[1]
 
     @property
     def tail(self):
@@ -36,7 +39,7 @@ class Snake(object):
 
     @property
     def length(self):
-        return self.data["length"]
+        return len(self.coords)
 
     @property
     def health(self):

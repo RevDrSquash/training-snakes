@@ -4,6 +4,7 @@ from base_snake import BaseSnake
 
 
 class ScaredSnake(BaseSnake):
+    DIFFICULTY = 4
 
     def move(self, gamestate):
         options = [up, down, left, right]
@@ -43,5 +44,5 @@ class ScaredSnake(BaseSnake):
     def taunt(self):
         return ""
 
-    def end(self):
+    def end(self, details):
         pass
