@@ -1,4 +1,4 @@
-from game_state import GameState
+from app.utils.game_state import GameState
 
 
 def build_test_gamestate(width=3, height=3, me=[(0,0)], opponents=[], food=[]):

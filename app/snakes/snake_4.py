@@ -1,6 +1,6 @@
 import random
 from utils.vector import up, down, left, right, noop
-from base_snake import BaseSnake
+from snakes.base_snake import BaseSnake
 
 
 class ScaredSnake(BaseSnake):

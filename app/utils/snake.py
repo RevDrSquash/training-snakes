@@ -1,4 +1,4 @@
-from vector import Vector
+from utils.vector import Vector
 
 
 class Snake(object):

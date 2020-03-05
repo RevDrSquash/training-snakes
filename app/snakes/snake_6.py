@@ -1,6 +1,6 @@
-from base_snake import BaseSnake
-from snake_4 import ScaredSnake
-from snake_5 import SimpleHungrySnake
+from snakes.base_snake import BaseSnake
+from snakes.snake_4 import ScaredSnake
+from snakes.snake_5 import SimpleHungrySnake
 
 
 class SimpleSometimesHungrySnake(BaseSnake):

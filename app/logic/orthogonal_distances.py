@@ -1,4 +1,4 @@
-from base_distances import BaseDistances
+from logic.base_distances import BaseDistances
 from utils.vector import directions
 
 

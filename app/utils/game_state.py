@@ -1,5 +1,5 @@
-from vector import Vector, up, down, left, right
-from snake import Snake
+from utils.vector import Vector, up, down, left, right
+from utils.snake import Snake
 import copy
 
 
@@ -122,7 +122,7 @@ class GameState(object):
         while len(to_visit) > 0:
             i += 1
             if i > 1000:
-                print "broken travel times"
+                print("broken travel times")
             (curr, turns) = to_visit.pop(0)
             for next in curr.neighbours():
                 if self.is_empty(next) and next.key not in shortest_travel_times:
@@ -151,7 +151,7 @@ class GameState(object):
         for n in finish.neighbours():
             i += 1
             if i > 1000:
-                print "broken pathing"
+                print("broken pathing")
             if not allow_length_1 and n == start:
                 continue
             if n.key in travel_times:
@@ -169,7 +169,7 @@ class GameState(object):
         while curr != start:
             i += 1
             if i > 1000:
-                print "broken pathing 2"
+                print("broken pathing 2")
 
             choices = []
             for n in curr.neighbours():

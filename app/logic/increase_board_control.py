@@ -14,7 +14,7 @@ class IncreaseBoardControl(object):
             my_control = board_control.get(gs.me.id)
             my_board_control.append((my_control, d))
         my_board_control.sort(reverse=False)
-        print ", ".join("%s:%s" % (d.direction(), c) for c,d in my_board_control)
+        print(", ".join("%s:%s" % (d.direction(), c) for c,d in my_board_control))
 
         if len(my_board_control) == 0:
             return
@@ -24,7 +24,7 @@ class IncreaseBoardControl(object):
         try:
             return my_board_control[1][1]
         except Exception as e:
-            print my_board_control
+            print(my_board_control)
             raise e
 
         # if any of those states has a boarder disappear by the time I get to it, it's infinitely good.
@@ -41,6 +41,8 @@ class IncreaseBoardControl(object):
             travel_times = []
             for snake_id in snake_ids:
                 travel_time = per_snake_travel_times[snake_id].get(coord)
+                if travel_time is None:
+                   travel_time = 10000
                 travel_times.append((travel_time, snake_id))
             travel_times.sort()
             return travel_times

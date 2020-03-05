@@ -1,5 +1,5 @@
 from utils.vector import Vector, up, down, left, right, noop
-from base_snake import BaseSnake
+from snakes.base_snake import BaseSnake
 
 
 class Snake0(BaseSnake):

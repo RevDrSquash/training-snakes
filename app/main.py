@@ -37,7 +37,7 @@ def move(snake_name):
 
     if type(move) is tuple:
         move, shout = move
-        print(snake_name, move.direction())
+        #print(snake_name, move.direction())
         return json.dumps({
             "move": move.direction(),
             "shout": shout

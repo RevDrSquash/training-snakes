@@ -1,4 +1,4 @@
-from base_snake import BaseSnake
+from snakes.base_snake import BaseSnake
 from utils.vector import up, down, left, right, Vector
 from logic import BadMoves, ChaiseTail, Eat, Kill, PathDistances, IncreaseBoardControl
 

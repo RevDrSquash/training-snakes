@@ -17,7 +17,7 @@ def test_distance_to():
          [V(0, 0), V(0, 1), V(0, 2)]
          )
     ]
-    print dists1
+    print(dists1)
     assert dists1 == expected1
 
 
